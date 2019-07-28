@@ -97,4 +97,4 @@ wifi.sta.config {ssid = SSID, pwd = SSID_PASSWORD}
 wifi.sta.autoconnect(1)
 
 -- hang out until we get a wifi connection before mqtt is sending.
-wait_for_wifi_conn( mqtt_handler )
+wait_for_wifi_conn(mqtt_handler)
