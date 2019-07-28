@@ -20,8 +20,8 @@ MQTT_CLIENT_KEEPALIVE_TIME = 120
 
 MQTT_BROKER = "192.168.2.92"
 MQTT_BROKER_PORT = 1883
-MQTT_TOPIC_IN = "/NAME/in" --< TODO set topicname
-MQTT_TOPIC_OUT = "/NAME/out" --< TODO set topicname
+MQTT_TOPIC_IN = "/NAME/command" --< TODO set topicname
+MQTT_TOPIC_OUT = "/NAME/SENSOR" --< TODO set topicname
 MQTT_BROKER_SECURE = 0
 
 DHT_PIN = 4
@@ -87,7 +87,7 @@ end
 function sendValue()
   readDHTValues()
   -- publish to broker on topic
-  m:publish(MQTT_TOPIC_OUT, temperature, 0, 0, function(client) print("sent value="..temperature) end)
+  m:publish(MQTT_TOPIC_OUT, '{"Temperature" :'..temperature..',"Humidity":'..humidity..'}', 0, 0, function(client) print("sent value="..temperature) end)
 end
 
 -- configure the ESP as a station (client)
