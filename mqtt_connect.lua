@@ -20,8 +20,8 @@ MQTT_CLIENT_KEEPALIVE_TIME = 120
 
 MQTT_BROKER = "192.168.2.92"
 MQTT_BROKER_PORT = 1883
-MQTT_TOPIC_IN = "/NAME-temp/in" --< TODO set topicname
-MQTT_TOPIC_OUT = "/NAME-temp/out" --< TODO set topicname
+MQTT_TOPIC_IN = "/NAME/in" --< TODO set topicname
+MQTT_TOPIC_OUT = "/NAME/out" --< TODO set topicname
 MQTT_BROKER_SECURE = 0
 
 DHT_PIN = 4
