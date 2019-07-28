@@ -13,15 +13,15 @@ local SIGNAL_MODE = wifi.PHYMODE_N
 
 local MTIMER = tmr.create()
 
-MQTT_CLIENT_ID = "NAME" --< EDIT!
+MQTT_CLIENT_ID = "NAME" --< TODO change hostname
 MQTT_CLIENT_USER = "openhab"
 MQTT_CLIENT_PASSWORD = "openhab"
 MQTT_CLIENT_KEEPALIVE_TIME = 120
 
 MQTT_BROKER = "192.168.2.92"
 MQTT_BROKER_PORT = 1883
-MQTT_TOPIC_IN = "/NAME-temp/in" --< EDIT!
-MQTT_TOPIC_OUT = "/NAME-temp/out" --< EDIT!
+MQTT_TOPIC_IN = "/NAME-temp/in" --< TODO set topicname
+MQTT_TOPIC_OUT = "/NAME-temp/out" --< TODO set topicname
 MQTT_BROKER_SECURE = 0
 
 DHT_PIN = 4
