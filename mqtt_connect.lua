@@ -87,7 +87,7 @@ end
 function sendValue()
   readDHTValues()
   -- publish to broker on topic
-  m:publish(MQTT_TOPIC_OUT, '{"Temperature" :'..temperature..',"Humidity":'..humidity..'}', 0, 0, function(client) print("sent value="..temperature) end)
+  m:publish(MQTT_TOPIC_OUT, '{"Temperature" :'..temperature..',"Humidity":'..humidity..'}', 0, 0, function(client) print("Temperature: "..temperature.." | Humidity: "..humidity) end)
 end
 
 -- configure the ESP as a station (client)
