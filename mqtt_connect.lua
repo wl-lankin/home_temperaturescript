@@ -69,7 +69,7 @@ function mqtt_handler()
   function(client, reason)
     print("failed reason: " .. reason)
   end)
-    -- send all 30 sec
+  -- send all 30 sec
   MTIMER:register(30 * 1000, tmr.ALARM_AUTO, function (t)
     sendValue()
   end)
